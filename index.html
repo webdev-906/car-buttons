@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Car Buttons</title>
+  <style>
+
+    body {
+     background: #333;
+    }
+ 
+    .filteredList {
+     border-radius: 10px;
+     padding: 20px;
+      width: 300px;
+      margin: 75px auto;  
+      border: 5px solid white; 
+    }
+
+    h3 {
+      color: #fff; 
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      margin: 5px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    button {
+      background-color: #222;
+      color: #fff; 
+      width: 120px; 
+      padding: 15px;
+      margin: 5px 
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:focus{
+      background-color: red;
+      color: #fff;
+      border: none;
+    }
+
+
+    .flex-row, .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .reset-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Mainly h3s and buttons...filteredList is the   container that's holding all the tag elements... -->
+    <div class="bg">
+      <div class="filteredList">
+      <h3>Select your favorite car:</h3>
+      <div class="flex-container">
+      <button class="filter-option" id="eco" onclick="myFunction()">Ecoboost</button>
+      <button class="filter-option" id="gt" onclick="myFunctionTwo()">Gt</button>
+      <button class="filter-option" id="zr1" onclick="myFunctionThree()">Zr1</button>
+      </div>
+      <div class="reset-row">
+      <button class="filter-option" id="reset" onclick="clearAll()">Reset</button>
+      </div>
+    </div>
+</div>
+<script>
+  // Button Functionality; targeting the id value of eco which is ecoboost and changing the text to The Ecoboost is cool when the button is clicked...same for gt and zrl
+  const myFunction = () => {document.getElementById("eco").innerHTML = "The Ecoboost is cool!"}
+  const myFunctionTwo = () => {document.getElementById("gt").innerHTML = "The Gt is a beast!"}
+  const myFunctionThree = () => {document.getElementById("zr1").innerHTML = "You sure?"}
+
+  // Reset button changing values back to orginal text 
+  const clearAll = () => {
+    document.getElementById("eco").innerHTML = "Ecoboost"
+    document.getElementById("gt").innerHTML = "Gt"
+    document.getElementById("zr1").innerHTML = "Zr1"
+  }
+</script>
+</body>
+
+</html>
